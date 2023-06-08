@@ -39,3 +39,17 @@ Once you have the above setup and information, you're ready to use the Terraform
 6. Once the Terraform process completes, follow the steps shown in the output section of the terraform process to **configure DNS resolution on your *local machine***. Remember not to modify the DNS resolution on the EC2 bastion.
 7. **Log in to Confluent Cloud**, go your Dedicated Cluster. Go to the "Topics" section and see if you're able to click "Create topic".
 If you can click, your proxy has been successfully created and you can now access the Confluent Cloud console locally!
+
+## **Considerations**
+
+- **The scripts create a new subnet and a new security group as part of the set-up process** to provide a clean, isolated environment for the proxy. It's crucial to note this to avoid potential conflict with any existing infrastructure.
+
+- **If you plan to use your existing EC2 instance**, you can follow the user data section in the `main.tf` file for necessary steps to modify your instance to work with this setup.
+
+- **The Terraform scripts are designed to set up four primary resources**: A subnet, a security group, a route table association, and an EC2 instance. Understanding these resources can provide a clear picture of the infrastructure being created and facilitate better troubleshooting.
+
+- **When selecting a CIDR range for your new subnet**, you can pick a small unused /28 CIDR within your VPC. This is to ensure there are no conflicts within your networking setup.
+
+- **The scripts use the most recent available AMI for the selected Linux distribution by default**. However, if you require a specific AMI, you can modify this in the script. Be aware that using older or specific AMIs can come with their unique challenges and requirements.
+
+- **Don't forget to run `terraform destroy`** when you're finished with the infrastructure and want to tear it down or if you wish to use your own subnet or other resources.
