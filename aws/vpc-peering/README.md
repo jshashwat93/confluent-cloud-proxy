@@ -24,5 +24,7 @@ Make sure you have the following information at hand before you begin:
 - **Your Route Table ID**: The ID of the route table with the required routes from the prerequisutes.
 - **AWS Region Code**: The AWS region code (like 'us-east-1', 'eu-west-1') where your VPC is located and where the resources will be created.
 - **A CIDR range**: A CIDR range for creating a new subnet for the EC2 bastion host.
+- **Confluent Cloud Cluster Endpoint**: The endpoint for your Confluent Cloud cluster that can be found under Cluster Settings -> Endpoints -> Bootstrap Server. It looks like `pkc-xxxxx.aws.confluent.cloud`. Remember to exclude the last part of the bootstrap server (`:9092`) for your endpoint.
+
 
 Once you have the above setup and information, you're ready to use the Terraform scripts in this directory to setup the nginx proxy.
