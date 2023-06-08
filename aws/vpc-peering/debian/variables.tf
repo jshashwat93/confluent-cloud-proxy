@@ -28,3 +28,8 @@ variable "route_table_id" {
   description = "The route table ID which has route to Confluent peering."
   type        = string
 }
+
+variable "confluent_cloud_endpoint" {
+  description = "Your Confluent Cloud cluster endpoint. Remeber to exclude the ':9092' part from the Bootstrap server"
+  type        = string
+}

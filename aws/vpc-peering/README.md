@@ -36,6 +36,6 @@ Once you have the above setup and information, you're ready to use the Terraform
 3. **Run `terraform apply`** to apply the changes required to reach the desired state of the configuration.
 4. **Enter 'yes' to confirm** the apply step when prompted.
 5. **Provide the requested information** from the "Information Required" section during the Terraform apply process..
-6. Once the Terraform process completes, **configure DNS resolution on your *local machine***. (Note: Do not modify the DNS resolution on the EC2 bastion)
+6. Once the Terraform process completes, follow the steps shown in the output section of the terraform process to **configure DNS resolution on your *local machine***. Remember not to modify the DNS resolution on the EC2 bastion.
 7. **Log in to Confluent Cloud**, go your Dedicated Cluster. Go to the "Topics" section and see if you're able to click "Create topic".
 If you can click, your proxy has been successfully created and you can now access the Confluent Cloud console locally!
