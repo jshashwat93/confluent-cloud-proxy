@@ -11,7 +11,7 @@ Before you start, ensure you have the following setup:
 - **Confluent Cloud AWS dedicated cluster with VPC peering on AWS.**
 - **An AWS VPC** that is peered with your Confluent Cloud cluster where the bastion host will also reside.
 - The VPC's **Route Table should have a route to Confluent Cloud CIDR**. This allows network traffic to reach the Confluent Cloud cluster. This step is a part of the peering setup process.
-- The VPC's **Route Table shoudl also have a route to the internet (via an Internet Gateway), VPN tunnel, or the network from where local access is required**. This allows your local machine to connect to the bastion host.
+- The VPC's **Route Table should also have a route to the internet (via an Internet Gateway), VPN tunnel, or the network from where local access is required**. This allows your local machine to connect to the bastion host.
 - **[Terraform](https://www.terraform.io/downloads.html) installed on your local machine.**
 
 ## **Information Required**
