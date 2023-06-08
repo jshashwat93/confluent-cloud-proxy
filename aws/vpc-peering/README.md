@@ -27,4 +27,15 @@ Make sure you have the following information at hand before you begin:
 - **Confluent Cloud Cluster Endpoint**: The endpoint for your Confluent Cloud cluster that can be found under Cluster Settings -> Endpoints -> Bootstrap Server. It looks like `pkc-xxxxx.aws.confluent.cloud`. Remember to exclude the last part of the bootstrap server (`:9092`) for your endpoint.
 
 
-Once you have the above setup and information, you're ready to use the Terraform scripts in this directory to setup the nginx proxy.
+Once you have the above setup and information, you're ready to use the Terraform scripts in this directory to setup the NGINX proxy.
+
+## **Steps**
+
+1. **Navigate to the directory** for the Linux distribution of your choice for the bastion host. Options include Amazon Linux, Amazon Linux 2, Ubuntu, Red Hat, and Debian.
+2. **Run `terraform init`** to initialize the Terraform working directory.
+3. **Run `terraform apply`** to apply the changes required to reach the desired state of the configuration.
+4. **Enter 'yes' to confirm** the apply step when prompted.
+5. **Provide the requested information** from the "Information Required" section during the Terraform apply process..
+6. Once the Terraform process completes, **configure DNS resolution on your *local machine***. (Note: Do not modify the DNS resolution on the EC2 bastion)
+7. **Log in to Confluent Cloud**, go your Dedicated Cluster. Go to the "Topics" section and see if you're able to click "Create topic".
+If you can click, your proxy has been successfully created and you can now access the Confluent Cloud console locally!
