@@ -1,2 +1,7 @@
-# confluent-cloud-proxy
-The 'confluent-cloud-proxy' repository provides Terraform scripts to set up an NGINX proxy on bastion hosts, facilitating local access to the Confluent Cloud Console in private network configurations across AWS, Azure, and Google Cloud.
+# Confluent Cloud Proxy: Accelerating Development and Testing with a Secure NGINX Proxy
+
+This repository delivers Terraform scripts designed to streamline the creation of an NGINX proxy on bastion hosts to enable seamless local access to the Confluent Cloud Console when using it with private networking clusters on AWS, Azure, and Google Cloud.
+
+The core objective is to accelerate the pace of development and testing through the setup of a clean and functional proxy. It serves as the groundwork to accelerate your team's progression from concept to implementation of a proxy server.
+
+It's crucial to note that transitioning into a production environment may necessitate adjustments. Unique networking considerations such as Virtual Private Networks (VPNs), load balancers, advanced routing, firewall configurations, and network access control lists (ACLs) could dictate the need for more bespoke arrangements. You may also need to factor in your organization's specific security policies, compliances, and performance requirements, such as encryption protocols, data residency, bandwidth, and latency considerations. Hence, fine-tuning for a production setup in your unique network infrastructure is recommended.

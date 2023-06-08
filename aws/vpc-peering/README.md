@@ -2,7 +2,7 @@
 
 # Confluent Cloud Proxy Setup with AWS VPC Peering
 
-This project contains Terraform scripts that help you setup an NGINX proxy on a bastion host within a peered AWS VPC. The purpose is to enable local access to the Confluent Cloud console for clusters using private networking like VPC peering or private endpoints.
+This project contains Terraform scripts that help you setup an NGINX proxy on a bastion host within a peered AWS VPC. The bastion host can be running a linux distribution of your choice. The purpose is to enable local access to the Confluent Cloud console for clusters using private networking like VPC peering or private endpoints.
 
 ## **Prerequisites**
 
